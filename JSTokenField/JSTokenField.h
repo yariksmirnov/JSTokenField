@@ -27,8 +27,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSTokenButton.h"
 
-@class JSTokenButton;
 @protocol JSTokenFieldDelegate;
 
 extern NSString *const JSTokenFieldFrameDidChangeNotification;
@@ -42,8 +42,6 @@ extern NSString *const JSDeletedTokenKey;
 	
 	UITextField *_textField;
 	
-	id <JSTokenFieldDelegate> _delegate;
-	
 	JSTokenButton *_deletedToken;
 	
 	UILabel *_label;
@@ -52,7 +50,7 @@ extern NSString *const JSDeletedTokenKey;
 @property (nonatomic, readonly) UITextField *textField;
 @property (nonatomic, retain) UILabel *label;
 @property (nonatomic, readonly, copy) NSMutableArray *tokens;
-@property (nonatomic, assign) id <JSTokenFieldDelegate> delegate;
+@property (nonatomic, weak) IBOutlet id <JSTokenFieldDelegate> delegate;
 
 - (void)addTokenWithTitle:(NSString *)string representedObject:(id)obj;
 - (void)removeTokenForString:(NSString *)string;
