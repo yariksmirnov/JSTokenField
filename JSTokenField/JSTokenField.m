@@ -253,7 +253,7 @@ NSString *const JSDeletedTokenKey = @"JSDeletedTokenKey";
 			currentRect.origin = CGPointMake(WIDTH_PADDING, (currentRect.origin.y + frame.size.height + HEIGHT_PADDING));
 		}
 		
-		frame.origin.x = currentRect.origin.x;
+		frame.origin.x = currentRect.origin.x - 4;
 		frame.origin.y = currentRect.origin.y + HEIGHT_PADDING;
 		
 		[token setFrame:frame];

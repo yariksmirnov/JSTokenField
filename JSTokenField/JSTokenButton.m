@@ -54,7 +54,7 @@
 	
 	[button sizeToFit];
 	CGRect frame = [button frame];
-	frame.size.width += 20;
+	frame.size.width += 24;
 	frame.size.height = 25;
 	[button setFrame:frame];
 	
